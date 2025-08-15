@@ -1,0 +1,16 @@
+name: agentic311
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.13.5
+  - pip
+  - ipykernel
+  - notebook
+  - pip:
+      - langchain
+      - langgraph
+      - openai
+      - tiktoken
+      - httpx
+      - python-dotenv

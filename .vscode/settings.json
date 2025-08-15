@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "/home/iid/miniconda3/envs/agentic311/bin/python",
+  "jupyter.kernels.filter": ["Python 3.13.5 (agentic311)"]
+}
