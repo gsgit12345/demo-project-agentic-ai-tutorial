@@ -4,12 +4,19 @@ from langchain_google_genai import GoogleGenerativeAI  #  model connector and yo
 import os
 from langchain_google_genai import GoogleGenerativeAI
 from langgraph.graph import StateGraph, END
+from dotenv import load_dotenv
 
-# --- Set API key ---
-os.environ["GOOGLE_API_KEY"] = "your_google_api_key_here"
+# Load API key from .env
+load_dotenv()
+print("API Key Loaded:", os.getenv("GOOGLE_API_KEY"))
 
-# --- Initialize Gemini LLM ---
+# Initialize Gemini LLM (LangChain connector)
 llm = GoogleGenerativeAI(model="gemini-1.5-flash")
+
+# Send a prompt
+response = llm.invoke("Write a 3-line motivational quote about AI and learning.")
+print(response)
+
 
 # --- Define State ---
 class State(dict):

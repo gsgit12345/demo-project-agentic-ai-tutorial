@@ -1,0 +1,71 @@
+=================================installing the miniconda and jupitor =====================
+echo $VIRTUAL_ENV       --it checks that virtual environment exist or not 
+which python3
+
+python -m venv --help  # just to confirm venv module exists
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+export PATH="/home/iid/miniconda3/bin:$PATH"
+eval "$(/home/iid/miniconda3/bin/conda shell.bash hook)"
+
+
+cd projectname
+
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+
+conda create -y -n "agentic311" python=3.13.5
+
+conda activate agentic311
+conda deactivate                  # if you want to deactivate
+
+pip install jupyter notebook ipykernel langchain langgraph openai tiktoken httpx python-dotenv
+python -m ipykernel install --user --name=agentic311 --display-name "Python 3.13.5 (agentic311)"
+
+mkdir -p src notebooks .vscode
+cat > .vscode/settings.json <<EOF
+{
+  "python.defaultInterpreterPath": "$HOME/miniconda3/envs/$ENV_NAME/bin/python",
+  "jupyter.kernels.filter": ["Python 3.11 ($ENV_NAME)"]
+}
+EOF
+
+jupyter kernelspec list
+
+
+jupyter --version
+
+Jupyter: Refresh Jupyter Kernels      --run from the command palate
+
+
+
+# below is the required package  to implement the goal base ai
+pip install langchain langchain-openai openai PyMuPDF
+
+# for the environment you have to install bellow library
+
+pip install python-dotenv
+
+
+pip install --upgrade langgraph-sdk langchain langchain-community langgraph openai langchain_openai duckduckgo-search   --installing ducduck
+ 
+================activate the environment============
+conda env list     --print environment list
+conda info --envs
+conda env list | awk '{print $1}' | grep -v "^#"
+conda config --set auto_activate false       it will stop  auto activation
+
+conda config --show | grep auto_activate
+
+
+
+conda activate agentic311     --old environmnet
+
+
+conda create -y -n "openaisdkwithpython12" python=3.12
+conda activate openaisdkwithpython12
+ 
+ conda deactivate openaisdkwithpython12
+
+above line create the environment and now you can install anything in new environmnet

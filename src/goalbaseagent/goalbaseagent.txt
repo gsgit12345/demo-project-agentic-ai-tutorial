@@ -1,0 +1,6 @@
+(base) [iid@master-node goalbaseagent]$ pip install streamlit
+
+(base) [iid@master-node goalbaseagent]$ pip install PyMuPDF
+(base) [iid@master-node goalbaseagent]$ pip install langchain
+
+pip show langgraph   it will show the langgraph version 

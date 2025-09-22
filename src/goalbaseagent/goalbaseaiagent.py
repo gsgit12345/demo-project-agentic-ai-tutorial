@@ -1,31 +1,22 @@
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
 from langchain.agents import initialize_agent, Tool, AgentType
 from langchain.memory import ConversationBufferMemory
 from dotenv import load_dotenv
-import os
-import re
-from langchain_ollama.llms import OllamaLLM
+from openai import OpenAI
+from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 
+
+import os
 
 load_dotenv()
 
-
-# llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
-
-
-# curl http://localhost:11434/api/generate -d '{
-#   "model": "llama3.2",
-#   "prompt": "Hello! How are you?"
-# }'
-
-
-# Initialize LLM
-llm = LLM(
-    model="ollama/llama3.2",
+# Initialize LLM with langchain_community
+llm = OllamaLLM(
+    model="llama3.2",
     base_url="http://localhost:11434"
 )
 
-response = llm.generate("Explain AI in one simple sentence.")
-
-# Print response
+# Option 1: Using invoke (simpler for one-off prompt)
+response = llm.invoke("Explain AI in one simple sentence.")
 print("Llama 3.2 says:", response)

@@ -1,0 +1,39 @@
+wget https://go.dev/dl/go1.22.7.linux-amd64.tar.gz
+
+go version    :--check go is install
+
+sudo dnf remove golang -y   --remove the old
+
+sudo rm -rf /usr/local/go
+
+sudo tar -C /usr/local -xzf go1.22.7.linux-amd64.tar.gz
+
+Edit your shell config (e.g., ~/.bashrc or ~/.zshrc):
+
+export PATH=$PATH:/usr/local/go/bin
+
+source ~/.bashrc
+
+conda activate myenv
+
+echo $CONDA_PREFIX
+
+Now create the directories inside that env:
+
+mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+mkdir -p $CONDA_PREFIX/etc/conda/deactivate.d
+
+Create activate.d/go.sh:
+
+echo 'export PATH=/usr/local/go/bin:$PATH' > $CONDA_PREFIX/etc/conda/activate.d/go.sh
+
+
+Create deactivate.d/go.sh:
+
+echo 'unset PATH' > $CONDA_PREFIX/etc/conda/deactivate.d/go.sh
+
+
+Now, when you activate your conda env, Go will be in the PATH.
+When you deactivate, it’ll be removed.
+
+

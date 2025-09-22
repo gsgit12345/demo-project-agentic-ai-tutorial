@@ -1,0 +1,58 @@
+🔹 Core Frameworks
+
+langchain → The base framework.
+
+langgraph → For building agentic workflows using graphs.
+
+🔹 LLM Providers
+
+openai → OpenAI GPT (ChatGPT, GPT-4o).
+
+anthropic → Anthropic’s Claude.
+
+langchain-google-genai → Google Gemini.
+
+cohere → Cohere’s models.
+
+ai21 → AI21 Jurassic & Jamba models.
+
+huggingface_hub → Hugging Face models (hosted / transformers).
+
+ollama → Local LLMs with Ollama.
+
+🔹 Vector Databases (RAG)
+
+faiss-cpu or faiss-gpu → FAISS vector store.
+
+qdrant-client → Qdrant DB.
+
+weaviate-client → Weaviate DB.
+
+pinecone-client → Pinecone DB.
+
+chromadb → Chroma DB (lightweight, open source).
+
+milvus → Milvus DB.
+
+🔹 Tools & Utilities
+
+langchain-experimental → Cutting-edge experimental tools.
+
+langserve → Expose LangChain as APIs.
+
+tiktoken → Tokenizer (for OpenAI models).
+
+pypdf / pdfplumber → For PDF loaders.
+
+bs4 (BeautifulSoup) → For web scraping loaders.
+
+✅ Industry Hot Picks (2025):
+If you’re aiming for job-ready projects, the most in-demand stack is:
+
+langchain, langgraph
+
+openai, anthropic, langchain-google-genai, huggingface_hub
+
+faiss-cpu or qdrant-client (for vector DB)
+
+langserve (for deploying as APIs)

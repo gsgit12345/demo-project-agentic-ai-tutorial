@@ -1,0 +1,12 @@
+first create new environment with python 3.12
+
+conda create -y -n "openaisdkwithpython12" python=3.12
+conda activate openaisdkwithpython12
+
+conda deactivate openaisdkwithpython12
+
+
+############### install the required packages  #############################
+
+
+

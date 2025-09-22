@@ -1,0 +1,55 @@
+
+
+https://www.youtube.com/watch?v=9WEqkhJMlVc&list=PLv8Cp2NvcY8DeLpPBREcC9aU8ESfYeSeX&index=10    ---agentic ai
+
+
+
+https://www.youtube.com/watch?v=dI8EQU0PFzc&list=PLv8Cp2NvcY8AzNCATbDWMr8vqbJBYbxFW   --generative ai
+
+
+=======================installing llama 3.2  on local system =========================
+
+curl -fsSL https://ollama.com/install.sh | sh
+curl -fsSL https://ollama.com/install.sh | sh
+
+
+sudo rm -rf /usr/local/bin/ollama /usr/local/lib/ollama      -if fails 
+
+
+wget $(curl -s https://api.github.com/repos/ollama/ollama/releases/latest | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4)   --it will download the latest version 
+  --will not use
+  
+  step--2 
+  curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
+tar -xvzf ollama-linux-amd64.tgz
+
+  
+  
+  step --3
+sudo mv bin/ollama /usr/local/bin/
+sudo mv lib/ollama /usr/local/lib/
+
+
+ollama --version
+
+ollama pull llama3.2
+ollama run llama2
+ollama run phi3
+ollama run mistral
+ollama ps
+ollama show <model>
+ollama pull <model>
+ollama run <model>
+
+==============================================================running the ollama  on the local system========================
+🔹 ollama run phi3  --it is microsoft version 
+
+to check it is running :---  ps aux | grep ollama
+
+ollama serve     --for running the llama server
+
+ollama pull llama3.2
+
+ollama list
+
+ollama run llama3.2    

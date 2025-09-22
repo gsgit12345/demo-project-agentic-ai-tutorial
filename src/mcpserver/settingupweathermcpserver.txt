@@ -1,0 +1,7 @@
+git clone https://github.com/mschneider82/mcp-openweather.git
+cd mcp-openweather
+
+go build -o mcp-weather   # with linux 
+
+go build -o mcp-weather.exe  # with window 
+
