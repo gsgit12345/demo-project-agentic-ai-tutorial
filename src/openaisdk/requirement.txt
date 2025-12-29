@@ -8,5 +8,5 @@ conda deactivate openaisdkwithpython12
 
 ############### install the required packages  #############################
 
-
+pip install  openai-agents
 

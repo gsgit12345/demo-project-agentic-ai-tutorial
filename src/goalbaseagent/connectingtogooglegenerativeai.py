@@ -1,6 +1,4 @@
 from langchain_google_genai import GoogleGenerativeAI  #  model connector and you can found it in lll sdk 
-
-
 import os
 from langchain_google_genai import GoogleGenerativeAI
 from langgraph.graph import StateGraph, END

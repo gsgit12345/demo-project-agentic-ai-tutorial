@@ -1,0 +1,3 @@
+https://github.com/githejie/mcp-server-calculator
+
+pip install mcp-server-calculator
