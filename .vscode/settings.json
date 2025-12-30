@@ -1,4 +1,14 @@
+
 {
-  "python.defaultInterpreterPath": "/home/iid/miniconda3/envs/agentic311/bin/python",
-  "jupyter.kernels.filter": ["Python 3.13.5 (agentic311)"]
+    "python.defaultInterpreterPath": "/home/iid/miniconda3/envs/agentic311/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "jupyter.interpreter.hashes": [
+        {
+            "interpreterPath": "/home/iid/miniconda3/envs/agentic311/bin/python",
+            "kernelId": "agentic311"
+        }
+    ],
+    "jupyter.jupyterServerType": "local",
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true
 }
